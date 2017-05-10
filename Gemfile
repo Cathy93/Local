@@ -26,7 +26,10 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', platforms: :ruby
 gem "paperclip", "~> 5.0.0"
+gem 'aws-sdk', '~> 2.3'
+gem 'devise'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 group :production do
