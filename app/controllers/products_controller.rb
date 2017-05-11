@@ -1,9 +1,13 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:seller, :new, :create, :edit, :update, :destroy]
   before_action :check_user, only: [:edit, :update, :destroy]
   # GET /products
   # GET /products.json
+  def seller
+    @products = Product.where(user:current_user)
+  end
+
   def index
     @products = Product.all
   end
@@ -75,8 +79,8 @@ class ProductsController < ApplicationController
     end
 
     def check_user
-      if current_user != @Product.user_id
+      if current_user != @product.user_id
         redirect_to root_url, alert: "Sorry, this listing belongs to someone else"
       end
-    end 
+    end
 end
