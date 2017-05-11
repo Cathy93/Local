@@ -49,3 +49,12 @@ body {
     margin:8px;
   }
 }
+
+.jumbotron {
+  background-image: url('paul-morris-201503.jpg');
+  background-size: cover;
+  h1, h2{
+    font-family: Abel, sans-serif;
+    color: white;
+  }
+}
