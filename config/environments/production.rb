@@ -94,4 +94,5 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   #REGUIRED for devise. Remember to change host 3000 to new domain name.
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
 end

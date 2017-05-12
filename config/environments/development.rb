@@ -53,4 +53,9 @@ Rails.application.configure do
   # config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   #required for devise gem
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.delivery_method = :mailgun
+config.action_mailer.mailgun_settings = {
+		api_key: '<mailgun api key>',
+		domain: '<mailgun domain>'
+}
 end

@@ -1,3 +1,17 @@
+<div class="row">
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <%= image_tag @product.image.url %>
+    </div>
+    <h3><%= @product.name %></h3>
+    <h3><%= number_to_currency(@product.price)%></h3>
+  </div>
+</div>
+
+
+
+
+
 <%= form_for([@product, @order]) do |f| %>
   <% if order.errors.any? %>
     <div id="error_explanation" class="alert alert-warning alert-dismissible" role="alert">
@@ -27,7 +41,21 @@
     <%= f.text_field :state, class: "form-control" %>
   </div>
 
+  <form action="/your-server-side-code" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_Kac1zzPeaCgEOKiL9kjYz0Ct"
+    data-amount="999"
+    data-name="Demo Site"
+    data-description="Widget"
+    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+    data-locale="auto"
+    data-zip-code="true"
+    data-currency="aud">
+  </script>
+</form>
+<br />
   <div class="form-group">
-    <%= f.submit "Complete Order", class: "btn btn-success" %>
+    <%= f.submit "Next", class: "btn btn-success" %>
   </div>
 <% end %>
