@@ -15,7 +15,7 @@ class ChargesController < ApplicationController
       :customer    => customer.id,
       :amount      => @amount,
       :description => @description,
-      :currency    => 'au'
+      :currency    => 'au',
       :receipt_email => @user_email,
       :source => token,
     )
