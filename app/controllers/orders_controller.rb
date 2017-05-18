@@ -28,7 +28,7 @@ class OrdersController < ApplicationController
     @seller = @product.user
 
     @order.product_id = @product.id
-    @order.buyer_id = current_user.id!
+    @order.buyer_id = current_user.id
     @order.seller_id = @seller.id
 
     respond_to do |format|

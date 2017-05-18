@@ -21,6 +21,7 @@ gem 'aws-sdk', '~> 2.3'
 gem 'devise'
 gem 'stripe'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'mailgun-ruby', '~>1.1.6'
 
 group :production do
   gem 'pg'
