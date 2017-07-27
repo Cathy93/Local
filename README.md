@@ -71,7 +71,7 @@ As a business I want a way to get paid without having to manage every transactio
 
 Link to DB Designer
 
-http://dbdesigner.net/designer/schema/89115
+![db designer](https://github.com/Cathy93/Local/blob/master/app/assets/images/db%20designer.png)
 
 6. Tools used
 
